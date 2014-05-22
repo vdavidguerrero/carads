@@ -1,4 +1,22 @@
 Carads::Application.routes.draw do
+  root 'users#index'
+  match ':controller(/:action(/:id))', :via => :get
+  match ':controller(/:action(/:id))', :via => :post
+
+  namespace :api , :defaults => {:format => :json} do
+    namespace :v1 do
+      resources :users do
+        collection do
+          get 'cities'
+          get 'login'
+          get 'get'
+          get 'create'
+          get 'update'
+        end
+      end
+
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

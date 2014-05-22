@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table" summary="Page list">
+      <tr class="active">
+
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Ciudad</th>
+        <th>foto1</th>
+        <th>foto2</th>
+        <th>foto3</th>
+
+      </tr>
+          <tr>
+            <td><%= @ad.id %> </td>
+            <td><%= @ad.user.name %></td>
+            <td><%= @ad.price %> </td>
+            <td><%= @ad.strokes %></td>
+            <td><%= @ad.created_at %> </td>
+            <td><%= @ad.user.city.name %></td>
+
+            <th><%= image_tag(@ad.pictures[0].path.to_s) %></th>
+            <th><%= image_tag(@ad.pictures[1].path.to_s) %></th>
+            <th><%= image_tag(@ad.pictures[2].path.to_s) %></th>
+
+          </tr>
+    </table>
+</div>
