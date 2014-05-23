@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-
 # MySql Gem
 gem 'mysql2'
 
@@ -37,7 +36,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
- gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby', '~> 3.0.1'
 
 # Use unicorn as the app server
 # gem 'unicorn'
